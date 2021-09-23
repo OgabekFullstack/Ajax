@@ -38,12 +38,12 @@ function ShowData(){
         console.log(page);
         let first = (page-1)*20;
         let last = page*20 + 1;
-        if(elem.id < last && elem.id> first){
+        if( elem.id > first && elem.id < last){
 
             posts.innerHTML += `
                     <div class="card">
-                        <div class="card-header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, odio.</div>
-                        <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, perspiciatis.</div>
+                        <div class="card-header">${data.title}</div>
+                        <div class="card-body">${data.body}</div>
                     </div>
                     `
         }
